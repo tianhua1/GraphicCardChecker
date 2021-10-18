@@ -20,9 +20,9 @@ namespace GraphicCardChecker
         private const string NAME = "<span data-product=\"name\">";
         private const string PRICE = "<strong class=\"price\" data-product=\"price\">";
         private const string LESSTHEN = "<";
-        private const string ARN = "arn:aws:sns:eu-west-1:112166137027:SendEmail";
-        private const string ACCESSKEY = "AKIARUHM7NTBQYHPLG66";
-        private const string SECRETKEY = "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";
+        private const string ARN = "";
+        private const string ACCESSKEY = "";
+        private const string SECRETKEY = "";
         public async Task HandleAsync()
         {
             using (WebClient client = new WebClient())
