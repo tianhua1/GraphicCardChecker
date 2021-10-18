@@ -1,0 +1,15 @@
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\GraphicCardChecker.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\GraphicCardChecker.deps.json
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\GraphicCardChecker.runtimeconfig.json
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\GraphicCardChecker.pdb
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\AWSSDK.Core.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\AWSSDK.Extensions.NETCore.Setup.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\AWSSDK.SimpleNotificationService.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Tian\source\repos\GraphicCardChecker\GraphicCardChecker\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Primitives.dll

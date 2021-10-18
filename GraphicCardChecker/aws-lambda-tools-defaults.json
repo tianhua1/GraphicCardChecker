@@ -1,0 +1,24 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "Tianhua",
+    "region"      : "eu-west-1",
+    "configuration" : "Release",
+    "framework"     : "netcoreapp3.1",
+    "function-runtime" : "dotnetcore3.1",
+    "function-memory-size" : 1024,
+    "function-timeout"     : 15,
+    "function-handler"     : "GraphicCardChecker::GraphicCardChecker.Function::FunctionHandler",
+    "function-name"        : "GraphicCardChecker",
+    "function-description" : "",
+    "package-type"         : "Zip",
+    "function-role"        : "arn:aws:iam::112166137027:role/service-role/GraphicCardChecker-role-1u2yarr1",
+    "tracing-mode"         : "PassThrough",
+    "environment-variables" : "",
+    "image-tag"             : ""
+}
