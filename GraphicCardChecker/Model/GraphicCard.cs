@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-
+﻿
 namespace GraphicCardChecker.Model
 {
     public class GraphicCard
