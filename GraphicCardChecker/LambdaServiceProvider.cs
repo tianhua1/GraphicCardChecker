@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using GraphicCardChecker.Model;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
@@ -14,6 +15,7 @@ namespace GraphicCardChecker
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
             AddBaseConfiguration(builder, services, environment, out IConfiguration configuration);
+            AddAWSConfiguration(services, configuration, out AWSConfiguration AWSConfiguration);
             AddHandler(services);
             return services.BuildServiceProvider();
         }
@@ -27,12 +29,20 @@ namespace GraphicCardChecker
         {
             configuration = builder
                         .SetBasePath(Directory.GetCurrentDirectory())
-                        .AddJsonFile(path: "appsettings1.json", optional: true, reloadOnChange: true)
-                        .AddJsonFile($"appsettings1.{environment}.json", optional: true)
+                        .AddJsonFile(path: "appsettings.json", optional: true, reloadOnChange: true)
+                        .AddJsonFile($"appsettings.{environment}.json", optional: true)
                         .AddEnvironmentVariables()
                         .Build();
-            var connectionString = configuration["ConnectionString"];
             services.AddSingleton(configuration);
+        }
+
+        private static void AddAWSConfiguration(ServiceCollection service, IConfiguration configuration, out AWSConfiguration AWSConfiguration) 
+        {
+            AWSConfiguration = new AWSConfiguration();
+            configuration.GetSection(nameof(AWSConfiguration)).Bind(AWSConfiguration);
+
+            service.AddSingleton(AWSConfiguration);
+        
         }
     }
 }

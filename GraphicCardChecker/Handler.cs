@@ -7,12 +7,16 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Linq;
 using Amazon.Lambda.Core;
-using Amazon.Runtime.Internal;
 
 namespace GraphicCardChecker
 {
     public class Handler : IHandler
     {
+        private AWSConfiguration AWSConfiguration;
+        public Handler(AWSConfiguration configuration)
+        {
+            AWSConfiguration = configuration;
+        }
         private const string CURRIES = "https://www.currys.ie/ieen/computing-accessories/components-upgrades/graphics-cards/324_3091_30343_xx_delivery-hd/xx_xx_xx_xx_5-6-criteria.html";
         private const string CURRIESALL = "https://www.currys.ie/ieen/computing-accessories/components-upgrades/graphics-cards/324_3091_30343_xx_xx/xx-criteria.html?dl_search=graphics%2Bcards";
 
@@ -20,9 +24,6 @@ namespace GraphicCardChecker
         private const string NAME = "<span data-product=\"name\">";
         private const string PRICE = "<strong class=\"price\" data-product=\"price\">";
         private const string LESSTHEN = "<";
-        private const string ARN = "arn:aws:sns:eu-west-1:112166137027:SendEmail";
-        private const string ACCESSKEY = "AKIARUHM7NTBQYHPLG66";
-        private const string SECRETKEY = "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";
         public async Task HandleAsync()
         {
             using (WebClient client = new WebClient())
@@ -71,13 +72,13 @@ namespace GraphicCardChecker
 
         private async Task SendMessage(string message)
         {
-            var awsCredentials = new Amazon.Runtime.BasicAWSCredentials(ACCESSKEY, SECRETKEY);
+            var awsCredentials = new Amazon.Runtime.BasicAWSCredentials(AWSConfiguration.ACCESSKEY, AWSConfiguration.SECRETKEY);
             var client = new AmazonSimpleNotificationServiceClient(awsCredentials, region: Amazon.RegionEndpoint.EUWest1);
 
             var request = new PublishRequest
             {
                 Message = message,
-                TopicArn = ARN
+                TopicArn = AWSConfiguration.ARN
             };
 
             try
